@@ -6,10 +6,13 @@ dependencies:
   - name: OpenZeppelin
     github: OpenZeppelin/openzeppelin-contracts
     version: 4.6.0
-  # - name: SafeContracts
-  #   github: safe-global/safe-contracts
-  #   version: 1.3.0
 solidity:
   import_remapping:
     - "@openzeppelin/contracts=OpenZeppelin/4.6.0"
-    # - "@gnosis.pm/safe-contracts/contracts=SafeContracts/1.3.0"
+hardhat:
+  port: 8555
+  fork:
+    ethereum:
+      mainnet:
+        upstream_provider: alchemy
+        enable_hardhat_deployments: true
